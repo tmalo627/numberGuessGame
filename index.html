@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess the Number</title>
+	    <link rel="icon" href="/images/icon.ico">
+        <link rel="stylesheet" href="styles.css">        
+    </head>
+    <body>
+        <h1>Guess the Number 1-100!</h1>
+        <div class="scoreTracker">
+            <p>Best score: <span id="bestScore">10</span></p>
+            <p>Current score: <span id="guesses"></span></p>
+        </div>
+        <div class="guessBoxDiv">
+            <p class="results" id="guessBox"></p>
+        </div>
+        <div class="inputs">
+            <label for="guess">Guess</label>
+            <input id="guess" name="guess" type="number" min="1" max="100">
+        </div>
+        <div class="buttons">
+            <button id="start">Start Game</button>
+            <button id="submit">Submit</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
