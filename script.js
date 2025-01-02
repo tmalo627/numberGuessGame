@@ -1,8 +1,5 @@
-const startBtn = document.getElementById("start");
-startBtn.addEventListener("click",startGame);
+$(document).ready(function() {
 
-const submitBtn = document.getElementById("submit");
-submitBtn.addEventListener("click",submitGuess);
 
 const bestScore = document.getElementById("bestScore");
 const guessBoxArea = document.getElementById("guessBox");
@@ -10,16 +7,16 @@ const guessesArea = document.getElementById("guesses");
 
 let randomNumber = "";
 let guessCounter = 0;
-
-function startGame () {
+    
+$("#start").click(function() {
     guessCounter = 0;
     guessesArea.innerHTML = guessCounter;
     guessBoxArea.innerHTML = "submit a guess";
     guessBoxArea.className = "resetGame";
     randomNumber = Math.ceil(Math.random()*100);
-}
+});
 
-function submitGuess() {
+$("#submit").click(function() {
     let guess = Number(document.getElementById("guess").value);
     guessCounter++;
     guessesArea.innerHTML = guessCounter;
@@ -46,4 +43,7 @@ function submitGuess() {
             }
         }
     }
-}
+});
+
+
+});
